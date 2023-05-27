@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+Extensions you should install : 
+1. Prettier
+2. styled-components
+3. Material Icon
+4. ES7+ React/Redux/React-Native snippets 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+How we are going to merge changes done on you branch to master branch:
+1. Create branch with name with the following convention :  TASK-<NUMBER>/<TASK-TITLE> , ex: TASK-132/add-search-bar-component
+2. Create PR (check PR topic) with the following description :
+    a. what was done
+    b. link to BackEnd PR if exist
+    c. how to test
+    d. Add team members in Reviewers section
+3. Any one of the team could pick the PR and review it (unless you want specific member to review it)
+4. Reviewer will pull the branch, test it, put comments if something is not working as mentioned in PR and finally will either request changes or approve,
+   if PR approved will merge it else will address comments then ask for another review
 
-## Available Scripts
+  ********************** PR example : https://github.com/imadsaad12/IBH_Portfolio/pull/1  ************************
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+What is Pull Request(PR) :
+1. Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub.
+   So whenever you create a PR it make it easier to the reviewer to compare your changes with master branch by looking on green section(as you can see in the example https://github.com/imadsaad12/IBH_Portfolio/pull/1)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+How to create PR : 
+1. Once you finished your task you have to push your changes to the branch
+2. Go to Pull Request branch in https://github.com/imadsaad12/IBH_Portfolio
+3. Click on  New pull request
+4. Click on create pu
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
