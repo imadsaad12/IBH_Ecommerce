@@ -24,8 +24,33 @@ What is Pull Request(PR) :
    So whenever you create a PR it make it easier to the reviewer to compare your changes with master branch by looking on green section(as you can see in the example https://github.com/imadsaad12/IBH_Portfolio/pull/1)
 
 How to create PR : 
-1. Once you finished your task you have to push your changes to the branch
+1. Once you finished your task you have to :
+    a. save your change
+    b. go to master branch pull latest changes
+    c. go back to you branch , merge your branch with master and fix conflict if exist
 2. Go to Pull Request branch in https://github.com/imadsaad12/IBH_Portfolio
 3. Click on  New pull request
-4. Click on create pu
+4. Click on compare and pull request
+5. write PR description as mentioned in (How we are going to merge changes done on you branch to master branch)
+
+How to review PR : 
+1. create branch on your machine with same PR branch name
+2. Pull changes from branch
+3. test
+
+
+Git tips : 
+1. Add new remote (do this command only when you pull the project from github) :
+    a. git remote add origin https://github.com/imadsaad12/IBH_Portfolio.git
+3. create branch : git checkout -b <BRANCH_NAME>
+3. commit change: 
+    a. git add .
+    b. git commit -m 'short message describe what done'
+4. push change : git push origin <BRANCH_NAME>
+5. pull change : git pull origin <BRANCH_NAME>
+6. merge your branch with master : git merge master
+7. go to another branch : git checkout <BRANCH_NAME>
+8. git list of all local branches on your machine : git branch
+
+
 
