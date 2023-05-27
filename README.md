@@ -4,6 +4,14 @@ Extensions you should install :
 3. Material Icon
 4. ES7+ React/Redux/React-Native snippets 
 
+How we are going to create tasks:
+1. Go to Issues tab in github
+2. Click on new issue
+3. add issue description
+4. assign issue to developer by clicking on assignees on right list
+5. when task is finished click on close issue button in the bottom 
+
+
 How we are going to merge changes done on you branch to master branch:
 1. Create branch with name with the following convention :  TASK-<NUMBER>/<TASK-TITLE> , ex: TASK-132/add-search-bar-component
 2. Create PR (check PR topic) with the following description :
