@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "./redux/store";
 import Product from "./pages/product";
 import SignUp from "./pages/sign-up";
+import SignIn from "./pages/sign-in";
 import { PersistGate } from "redux-persist/integration/react";
 
 const queryClient = new QueryClient();
@@ -18,6 +19,7 @@ function App() {
           <QueryClientProvider client={queryClient}>
             <Routes>
               <Route path="/" element={<SignUp />} />
+              <Route path="/signin" element={<SignIn />} />
               <Route path="/home" element={<Home />} />
               <Route path="/about-us" element={<Home />} />
               <Route path="/contact" element={<Home />} />
