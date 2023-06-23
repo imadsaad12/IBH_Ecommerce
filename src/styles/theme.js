@@ -5,6 +5,7 @@ const theme = {
     primaryWhite: "#fcfbff",
     primaryGray: "#a5adb7",
     primaryError: "#FF0000",
+    primaryBack: "#ff3737",
   },
   fontSizes: {
     regular: 20,

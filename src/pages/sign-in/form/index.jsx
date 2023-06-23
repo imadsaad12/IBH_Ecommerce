@@ -1,15 +1,15 @@
 import React from "react";
-import { Container, Description, FieldsWrapper, Header } from "./styles";
 import InputField from "../../../components/inputField";
-import { HAVE_ACCOUNT, SIGNUP, SIGN_IN } from "../../../global/strings";
-import { useForm } from "react-hook-form";
 import Button from "../../../components/Button";
-import { useApiMutation } from "../../../api/user/sign-up";
+import SpinnerLoading from "../../../components/SpinnerLoading";
+import { Container, Header, FieldsWrapper } from "../../sign-up/form/styles";
+import { SIGN_IN } from "../../../global/strings";
+import { useForm } from "react-hook-form";
+import { useApiMutation } from "../../../api/user/sign-in";
 import { useDispatch } from "react-redux";
 import { SET_TOKEN } from "../../../redux/actions";
 import { useNavigate } from "react-router-dom";
-import SignInButton from "./SignInButton";
-import SpinnerLoading from "../../../components/SpinnerLoading";
+import { backButtonStyle } from "./styles";
 
 export default function Form() {
   const { register, handleSubmit } = useForm();
@@ -27,7 +27,9 @@ export default function Form() {
     })();
   };
 
-  const handleClick = () => navigate("/signin");
+  const handleBackClick = () => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -35,32 +37,8 @@ export default function Form() {
         <SpinnerLoading />
       ) : (
         <>
-          <Header>{SIGNUP}</Header>
-          <Description>
-            {HAVE_ACCOUNT}
-            <SignInButton
-              onClick={handleClick}
-              text={SIGN_IN}
-            />
-          </Description>
-
+          <Header>{SIGN_IN}</Header>
           <Container>
-            <FieldsWrapper>
-              <InputField
-                name="firstName"
-                placeHolder="joe"
-                label="First name"
-                style={{ width: "15rem" }}
-                register={register}
-              />
-              <InputField
-                name="lastName"
-                placeHolder="doe"
-                label="Last name"
-                style={{ width: "15rem" }}
-                register={register}
-              />
-            </FieldsWrapper>
             <InputField
               name="userName"
               placeHolder="joe-doe"
@@ -75,7 +53,14 @@ export default function Form() {
               style={{ width: "33rem" }}
               register={register}
             />
-            <Button text="Submit" onClick={handleOnClick} />
+            <FieldsWrapper>
+              <Button
+                text="Back"
+                onClick={handleBackClick}
+                style={backButtonStyle}
+              />
+              <Button text={SIGN_IN} onClick={handleOnClick} />
+            </FieldsWrapper>
           </Container>
         </>
       )}

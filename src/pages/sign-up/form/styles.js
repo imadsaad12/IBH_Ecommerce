@@ -23,3 +23,16 @@ export const FieldsWrapper = styled.div`
   flex-direction: row;
   gap: 1.5rem;
 `;
+
+export const SignInStyle = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primaryBlue};
+  }
+`;
