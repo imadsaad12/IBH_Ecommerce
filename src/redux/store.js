@@ -1,16 +1,16 @@
-import { createStore, applyMiddleware, compose } from "redux";
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import thunk from "redux-thunk";
-import { combineReducers } from "redux";
-import { userReducer } from "./reducers/user";
+import { createStore, applyMiddleware, compose } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import thunk from 'redux-thunk';
+import { combineReducers } from 'redux';
+import { userReducer } from './reducers/user';
 
 const rootReducer = combineReducers({
   user: userReducer,
 });
 
 const persistConfig = {
-  key: "root",
+  key: 'root',
   storage,
 };
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CustomizedButton = styled.button`
   width: 150px;

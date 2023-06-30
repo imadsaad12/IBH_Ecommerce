@@ -1,6 +1,6 @@
-import { REMOVE_TOKEN, SET_TOKEN } from "../actions";
+import { REMOVE_TOKEN, SET_TOKEN } from '../actions';
 
-const initialState = { token: "" };
+const initialState = { token: '' };
 export const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_TOKEN:
@@ -9,7 +9,7 @@ export const userReducer = (state = initialState, action) => {
       };
     case REMOVE_TOKEN:
       return {
-        token: "",
+        token: '',
       };
     default:
       return state;

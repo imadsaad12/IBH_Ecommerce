@@ -1,6 +1,6 @@
-import axios from "axios";
-import { signUpURL } from "../URLs";
-import { useMutation } from "@tanstack/react-query";
+import axios from 'axios';
+import { signUpURL } from '../URLs';
+import { useMutation } from '@tanstack/react-query';
 
 const signUp = async (data) => {
   const URL = signUpURL();
@@ -17,7 +17,7 @@ export const useApiMutation = (onSuccess, onError) => {
     try {
       await mutate(data);
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error:', error);
     }
   };
 
