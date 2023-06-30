@@ -1,7 +1,7 @@
-import React from "react";
-import ReactLoading from "react-loading";
-import theme from "../../styles/theme";
-import { Container } from "./styles";
+import React from 'react';
+import ReactLoading from 'react-loading';
+import theme from '../../styles/theme';
+import { Container } from './styles';
 
 export default function SpinnerLoading() {
   return (

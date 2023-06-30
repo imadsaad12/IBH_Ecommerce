@@ -1,5 +1,5 @@
-import React from "react";
-import { CustomizedButton } from "./styles";
+import React from 'react';
+import { CustomizedButton } from './styles';
 
 export default function Button({ onClick, text, style }) {
   return (

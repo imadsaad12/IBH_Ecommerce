@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import { store, persistor } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import Routes from './routes';
-import axios from 'axios';
 
 function App() {
   return (
@@ -14,19 +13,5 @@ function App() {
     </Provider>
   );
 }
-axios.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    // if (
-    //   error.response &&
-    //   error.response.status === codes.UNAUTHORIZED &&
-    //   window.location !== LOGIN
-    // ) {
-    //   localStorage.setItem("isSessionExpired", JSON.stringify(true));
-    //   logout();
-    // }
-    // return Promise.reject(error);
-  }
-);
 
 export default App;

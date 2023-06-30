@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, ErrorMessage, Input, Label } from "./styles";
+import React from 'react';
+import { Container, ErrorMessage, Input, Label } from './styles';
 
 export default function InputField({
   onChange,
@@ -10,7 +10,7 @@ export default function InputField({
   label,
   register,
   errorMessage,
-  type = "text",
+  type = 'text',
 }) {
   return (
     <Container>

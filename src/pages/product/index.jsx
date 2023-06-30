@@ -1,6 +1,6 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import { Container, Image, InformationContainer, Text } from "./styles";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import { Container, Image, InformationContainer, Text } from './styles';
 
 export default function Product() {
   const location = useLocation();

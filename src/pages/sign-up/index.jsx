@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Container,
   Description,
@@ -6,13 +6,13 @@ import {
   LeftContainer,
   RightContainer,
   Title,
-} from "./styles";
+} from './styles';
 import {
   ECOMMERCE,
   SIGNUP_DESCRIPTION,
   SIGNUP_TITLE,
-} from "../../global/strings";
-import Form from "./form";
+} from '../../global/strings';
+import Form from './form';
 
 export default function SignUp() {
   return (

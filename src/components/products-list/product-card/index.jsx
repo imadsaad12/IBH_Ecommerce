@@ -1,6 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { Container, Image, Text } from "./styles";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Container, Image, Text } from './styles';
 
 export default function ProductCard({ product }) {
   const navigate = useNavigate();

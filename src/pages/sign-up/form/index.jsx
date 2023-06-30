@@ -1,15 +1,15 @@
-import React from "react";
-import { Container, Description, FieldsWrapper, Header } from "./styles";
-import InputField from "../../../components/inputField";
-import { HAVE_ACCOUNT, SIGNUP, SIGN_IN } from "../../../global/strings";
-import { useForm } from "react-hook-form";
-import Button from "../../../components/Button";
-import { useApiMutation } from "../../../api/user/sign-up";
-import { useDispatch } from "react-redux";
-import { SET_TOKEN } from "../../../redux/actions";
-import { useNavigate } from "react-router-dom";
-import SignInButton from "./SignInButton";
-import SpinnerLoading from "../../../components/SpinnerLoading";
+import React from 'react';
+import { Container, Description, FieldsWrapper, Header } from './styles';
+import InputField from '../../../components/inputField';
+import { HAVE_ACCOUNT, SIGNUP, SIGN_IN } from '../../../global/strings';
+import { useForm } from 'react-hook-form';
+import Button from '../../../components/Button';
+import { useApiMutation } from '../../../api/user/sign-up';
+import { useDispatch } from 'react-redux';
+import { SET_TOKEN } from '../../../redux/actions';
+import { useNavigate } from 'react-router-dom';
+import SignInButton from './SignInButton';
+import SpinnerLoading from '../../../components/SpinnerLoading';
 
 export default function Form() {
   const { register, handleSubmit } = useForm();
@@ -18,7 +18,7 @@ export default function Form() {
 
   const { status, handleApiCall } = useApiMutation(({ data }) => {
     dispatch({ type: SET_TOKEN, payload: data.token });
-    navigate("/home");
+    navigate('/home');
   });
 
   const handleOnClick = () => {
@@ -27,11 +27,11 @@ export default function Form() {
     })();
   };
 
-  const handleClick = () => navigate("/");
+  const handleClick = () => navigate('/');
 
   return (
     <>
-      {status === "loading" ? (
+      {status === 'loading' ? (
         <SpinnerLoading />
       ) : (
         <>
@@ -47,14 +47,14 @@ export default function Form() {
                 name="firstName"
                 placeHolder="joe"
                 label="First name"
-                style={{ width: "15rem" }}
+                style={{ width: '15rem' }}
                 register={register}
               />
               <InputField
                 name="lastName"
                 placeHolder="doe"
                 label="Last name"
-                style={{ width: "15rem" }}
+                style={{ width: '15rem' }}
                 register={register}
               />
             </FieldsWrapper>
@@ -62,14 +62,14 @@ export default function Form() {
               name="userName"
               placeHolder="joe-doe"
               label="Username"
-              style={{ width: "33rem" }}
+              style={{ width: '33rem' }}
               register={register}
             />
             <InputField
               name="password"
               placeHolder="Password@123"
               label="Password"
-              style={{ width: "33rem" }}
+              style={{ width: '33rem' }}
               register={register}
             />
             <Button text="Submit" onClick={handleOnClick} />
