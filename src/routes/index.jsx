@@ -1,14 +1,14 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import React from "react";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import React from 'react';
 import {
   BrowserRouter,
   Routes as RoutesWrapper,
   Route,
-} from "react-router-dom";
-import SignUp from "../pages/sign-up";
-import SignIn from "../pages/sign-in";
-import Home from "../pages/home";
-import Product from "../pages/product";
+} from 'react-router-dom';
+import SignUp from '../pages/sign-up';
+import SignIn from '../pages/sign-in';
+import Home from '../pages/home';
+import Product from '../pages/product';
 import {
   ABOUT_US,
   CONTACT,
@@ -16,8 +16,8 @@ import {
   PRODUCT_BY_ID,
   SIGN_IN,
   SIGN_UP,
-} from "./URLs";
-import Layout from "../components/layout";
+} from './URLs';
+import Layout from '../components/layout';
 
 export default function Routes() {
   const queryClient = new QueryClient();
