@@ -5,8 +5,8 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  background-color: black;
-  justify-content: space-evenly;
+  background-color: ${(props) => props.theme.colors.primaryBlue};
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -21,7 +21,13 @@ export const MenuItem = styled.button`
   border: none;
   cursor: pointer;
   &:hover {
-    background-color: white;
-    color: black;
+    color: ${(props) => props.theme.colors.secondaryBlue};
   }
+`;
+
+export const LeftContainer = styled.div`
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 `;

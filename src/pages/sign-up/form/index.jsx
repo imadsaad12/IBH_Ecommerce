@@ -27,7 +27,7 @@ export default function Form() {
     })();
   };
 
-  const handleClick = () => navigate("/signin");
+  const handleClick = () => navigate("/");
 
   return (
     <>
@@ -38,10 +38,7 @@ export default function Form() {
           <Header>{SIGNUP}</Header>
           <Description>
             {HAVE_ACCOUNT}
-            <SignInButton
-              onClick={handleClick}
-              text={SIGN_IN}
-            />
+            <SignInButton onClick={handleClick} text={SIGN_IN} />
           </Description>
 
           <Container>

@@ -5,3 +5,7 @@ export const SIGNUP_DESCRIPTION =
 export const SIGNUP = "Sign up";
 export const HAVE_ACCOUNT = "Have account ?";
 export const SIGN_IN = "Sign in";
+export const SIGN_OUT = "Sign out";
+export const HOME = "Home";
+export const ABOUT_US = "About us";
+export const CONTACT = "Contact";

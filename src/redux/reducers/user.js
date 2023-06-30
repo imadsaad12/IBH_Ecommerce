@@ -1,4 +1,4 @@
-import { SET_TOKEN } from "../actions";
+import { REMOVE_TOKEN, SET_TOKEN } from "../actions";
 
 const initialState = { token: "" };
 export const userReducer = (state = initialState, action) => {
@@ -7,7 +7,10 @@ export const userReducer = (state = initialState, action) => {
       return {
         token: action.payload,
       };
-
+    case REMOVE_TOKEN:
+      return {
+        token: "",
+      };
     default:
       return state;
   }

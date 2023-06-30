@@ -52,6 +52,7 @@ export default function Form() {
               label="Password"
               style={{ width: "33rem" }}
               register={register}
+              type="password"
             />
             <FieldsWrapper>
               <Button
