@@ -5,19 +5,17 @@ import { HAVE_ACCOUNT, SIGNUP, SIGN_IN } from '../../../global/strings';
 import { useForm } from 'react-hook-form';
 import Button from '../../../components/Button';
 import { useApiMutation } from '../../../api/user/sign-up';
-import { useDispatch } from 'react-redux';
-import { SET_TOKEN } from '../../../redux/actions';
 import { useNavigate } from 'react-router-dom';
 import SignInButton from './SignInButton';
 import SpinnerLoading from '../../../components/SpinnerLoading';
+import { setToken } from '../../../utils/authentication';
 
 export default function Form() {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const { status, handleApiCall } = useApiMutation(({ data }) => {
-    dispatch({ type: SET_TOKEN, payload: data.token });
+    setToken(data.token);
     navigate('/home');
   });
 

@@ -1,16 +1,14 @@
 import React from 'react';
 import { Container, LeftContainer, MenuItem } from './styles';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { REMOVE_TOKEN } from '../../../redux/actions';
 import { ABOUT_US, CONTACT, HOME, SIGN_OUT } from '../../../global/strings';
+import { removeToken } from '../../../utils/authentication';
 
 export default function Bar() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const handleSignOut = () => {
-    dispatch({ type: REMOVE_TOKEN });
+    removeToken();
     navigate('/');
   };
   return (

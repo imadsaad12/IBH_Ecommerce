@@ -6,18 +6,16 @@ import { Container, Header, FieldsWrapper } from '../../sign-up/form/styles';
 import { SIGN_IN } from '../../../global/strings';
 import { useForm } from 'react-hook-form';
 import { useApiMutation } from '../../../api/user/sign-in';
-import { useDispatch } from 'react-redux';
-import { SET_TOKEN } from '../../../redux/actions';
 import { useNavigate } from 'react-router-dom';
 import { backButtonStyle } from './styles';
+import { setToken } from '../../../utils/authentication';
 
 export default function Form() {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const { status, handleApiCall } = useApiMutation(({ data }) => {
-    dispatch({ type: SET_TOKEN, payload: data.token });
+    setToken(data.token);
     navigate('/home');
   });
 
