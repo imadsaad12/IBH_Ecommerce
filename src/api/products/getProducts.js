@@ -16,7 +16,7 @@ export const getProducts = () => {
 
 export const useProductsQuery = () => {
   const {
-    data: { data: arrayOfProducts },
+    data: arrayOfProducts,
     isLoading,
     error,
   } = useQuery(['products'], getProducts);
