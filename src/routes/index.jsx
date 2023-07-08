@@ -18,12 +18,12 @@ import {
   SIGN_UP,
 } from './URLs';
 import Layout from '../components/layout';
-import { useDispatch } from 'react-redux';
 import axios from 'axios';
+import { removeToken } from '../utils/authentication';
 
 export default function Routes() {
   const queryClient = new QueryClient();
-  const dispatch = useDispatch();
+
   return (
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
@@ -51,7 +51,7 @@ axios.interceptors.response.use(
       error.response.status === 401 &&
       window.location !== SIGN_IN
     ) {
-      dispatch({ type: REMOVE_TOKEN });
+      removeToken();
       window.location.href = SIGN_IN;
     }
     return Promise.reject(error);
