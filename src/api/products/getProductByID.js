@@ -23,11 +23,5 @@ export const useProductByIdQuery = (id) => {
     cacheTime: 0,
     staleTime: Infinity,
   });
-
-  const isErrorProductNotFound =
-    product && product.data && product.data.status
-      ? product.data.status !== 200
-      : false;
-
-  return { product, isLoading, error, isErrorProductNotFound };
+  return { product, isLoading, error };
 };

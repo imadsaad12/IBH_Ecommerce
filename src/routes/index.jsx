@@ -34,7 +34,7 @@ export default function Routes() {
             <Route path={HOME} element={<Home />} />
             <Route path={ABOUT_US} element={<Home />} />
             <Route path={CONTACT} element={<Home />} />
-            <Route path={PRODUCT_BY_ID} element={<Product />} />
+            <Route path={PRODUCT_BY_ID(':id')} element={<Product />} />
           </RoutesWrapper>
         </Layout>
       </QueryClientProvider>

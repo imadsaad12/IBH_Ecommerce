@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { PRODUCT_BY_ID } from '../../../routes/URLs';
 import {
   Container,
   Image,
@@ -14,8 +15,7 @@ export default function ProductCard({ product, stars }) {
   const navigate = useNavigate();
   const { _id, price, name, image, category, size } = product;
 
-  const handleClick = (id) =>
-    navigate(`/product/${id}`);
+  const handleClick = (id) => navigate(PRODUCT_BY_ID(id));
 
   return (
     <Container onClick={() => handleClick(_id)}>

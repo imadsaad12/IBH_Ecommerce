@@ -10,3 +10,6 @@ export const HOME = 'Home';
 export const ABOUT_US = 'About us';
 export const CONTACT = 'Contact';
 export const PRODUCT_NOT_FOUND = 'Product Not Found';
+export const FULL_PAGE = 'full page';
+export const HALF_PAGE = 'half page';
+export const ADD_TO_CART = 'Add to Cart';
