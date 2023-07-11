@@ -1,14 +1,21 @@
 import { useProductsQuery } from '../../api/products/getProducts.js';
 import ProductsList from '../../components/products-list/index.jsx';
 import { Container } from './styles.js';
-
+import SpinnerLoading from '../../components/SpinnerLoading';
+import { FULL_PAGE } from '../../global/strings.js';
 const Home = () => {
-  const { data } = useProductsQuery();
-
+  const { arrayOfProducts, isLoading, error } = useProductsQuery();
+  const shouldDisplaySpinner = isLoading || error;
   return (
-    <Container>
-      <ProductsList data={data} />
-    </Container>
+    <>
+      {shouldDisplaySpinner ? (
+        <SpinnerLoading position={FULL_PAGE} />
+      ) : (
+        <Container>
+          <ProductsList products={arrayOfProducts.data} />
+        </Container>
+      )}
+    </>
   );
 };
 export default Home;

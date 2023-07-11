@@ -8,6 +8,7 @@ const theme = {
     primaryBack: '#ff3737',
   },
   fontSizes: {
+    big: 25,
     regular: 20,
     small: 15,
     h1: 48,

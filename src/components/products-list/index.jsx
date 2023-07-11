@@ -1,16 +1,21 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, RatingStar } from './styles';
 import ProductCard from './product-card';
 
-export default function ProductsList() {
-  const products = [
-    { image: 'test', size: 23, name: 'T-shirt', category: 'asaa', price: 190 },
-  ];
+export default function ProductsList({ products }) {
+  
+  const renderRatingStars = () => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      stars.push(<RatingStar key={i}>&#9733;</RatingStar>);
+    }
+    return stars;
+  };
 
   return (
     <Container>
       {products?.map((product) => (
-        <ProductCard product={product} key={product._id} />
+        <ProductCard product={product} key={product._id} stars={renderRatingStars()} />
       ))}
     </Container>
   );

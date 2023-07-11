@@ -9,3 +9,8 @@ export const Container = styled.div`
   margin-top: 5rem;
   margin-bottom: 5rem;
 `;
+
+export const RatingStar = styled.span`
+  color: #f1c40f;
+  font-size: 25px;
+`;

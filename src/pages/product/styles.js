@@ -2,29 +2,26 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100vh;
-  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
 `;
 
 export const Image = styled.img`
   width: 50%;
-  height: 600px;
+  max-height: 600px;
   border-radius: 10px;
 `;
 
-export const InformationContainer = styled.div`
-  width: 50%;
-  height: 600px;
+export const NotFoundContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 `;
 
-export const Text = styled.p`
-  font-size: 30px;
+export const NotFoundMessage = styled.p`
+  font-size: ${(props) => props.theme.fontSizes.big}px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  padding-left: 2rem;
+  color: ${(props) => props.theme.colors.secondaryBlue};
 `;
