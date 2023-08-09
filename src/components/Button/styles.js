@@ -9,4 +9,7 @@ export const CustomizedButton = styled.button`
   color: ${(props) => props.theme.colors.primaryWhite};
   font-family: ${(props) => props.theme.fontFamily.regular};
   font-size: ${(props) => props.theme.fontSizes.regular}px;
+  @media (max-width: ${(props) => props.theme.breakpoints.md}){
+    width: 100px;
+  }
 `;

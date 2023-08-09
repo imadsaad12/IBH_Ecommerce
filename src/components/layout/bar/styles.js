@@ -8,6 +8,12 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.primaryBlue};
   justify-content: space-between;
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    background-color: ${({ isMenuOpen, theme }) =>
+    isMenuOpen ? theme.colors.primaryBlue : theme.colors.primaryWhite};
+    height: ${({ isMenuOpen }) => isMenuOpen ? '100vh' : 'auto'};
+  }
+
 `;
 
 export const MenuItem = styled.button`
@@ -23,6 +29,15 @@ export const MenuItem = styled.button`
   &:hover {
     color: ${(props) => props.theme.colors.secondaryBlue};
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.blg}) and (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    font-size: 14px;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    display: ${({ isMenuOpen }) => isMenuOpen ? 'block' : 'none'};
+    align-self: center;
+    font-size: 23px;
+    height: 8rem;
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -30,4 +45,19 @@ export const LeftContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+
+export const HamburgerIcon = styled.div`
+  display: none;
+  color: ${(props) => props.theme.colors.primaryBlue};
+
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    display: block;
+    color: ${({ isMenuOpen, theme }) =>
+    isMenuOpen ? theme.colors.primaryWhite : theme.colors.primaryBlue};
+  }
 `;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Description, FieldsWrapper, Header } from './styles';
+import { Container, Description, Header } from './styles';
 import InputField from '../../../components/inputField';
 import { HAVE_ACCOUNT, SIGNUP, SIGN_IN } from '../../../global/strings';
 import { useForm } from 'react-hook-form';
@@ -40,37 +40,41 @@ export default function Form() {
           </Description>
 
           <Container>
-            <FieldsWrapper>
-              <InputField
-                name="firstName"
-                placeHolder="joe"
-                label="First name"
-                style={{ width: '15rem' }}
-                register={register}
-              />
-              <InputField
-                name="lastName"
-                placeHolder="doe"
-                label="Last name"
-                style={{ width: '15rem' }}
-                register={register}
-              />
-            </FieldsWrapper>
+            {/* <FieldsWrapper> */}
+            <InputField
+              name="firstName"
+              placeHolder="joe"
+              label="First name"
+              style={{ width: '100%', paddingRight: '50%' }}
+              register={register}
+            />
+            <InputField
+              name="lastName"
+              placeHolder="doe"
+              label="Last name"
+              style={{ width: '100%', paddingRight: '50%' }}
+              register={register}
+            />
+            {/* </FieldsWrapper> */}
             <InputField
               name="userName"
               placeHolder="joe-doe"
               label="Username"
-              style={{ width: '33rem' }}
+              style={{ width: '100%', paddingRight: '50%' }}
               register={register}
             />
             <InputField
               name="password"
               placeHolder="Password@123"
               label="Password"
-              style={{ width: '33rem' }}
+              style={{ width: '100%', paddingRight: '50%' }}
               register={register}
             />
-            <Button text="Submit" onClick={handleOnClick} />
+            <Button
+              text="Submit"
+              onClick={handleOnClick}
+              style={{ marginLeft: '15%' }}
+            />
           </Container>
         </>
       )}

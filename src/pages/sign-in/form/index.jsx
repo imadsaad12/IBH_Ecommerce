@@ -41,14 +41,14 @@ export default function Form() {
               name="userName"
               placeHolder="joe-doe"
               label="Username"
-              style={{ width: '33rem' }}
+              style={{ width: '100%' }}
               register={register}
             />
             <InputField
               name="password"
               placeHolder="Password@123"
               label="Password"
-              style={{ width: '33rem' }}
+              style={{ width: '100%' }}
               register={register}
               type="password"
             />
