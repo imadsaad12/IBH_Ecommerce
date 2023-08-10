@@ -6,6 +6,7 @@ import { FULL_PAGE } from '../../global/strings.js';
 const Home = () => {
   const { arrayOfProducts, isLoading, error } = useProductsQuery();
   const shouldDisplaySpinner = isLoading || error;
+
   return (
     <>
       {shouldDisplaySpinner ? (

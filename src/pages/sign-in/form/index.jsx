@@ -2,13 +2,15 @@ import React from 'react';
 import InputField from '../../../components/inputField';
 import Button from '../../../components/Button';
 import SpinnerLoading from '../../../components/SpinnerLoading';
-import { Container, Header, FieldsWrapper } from '../../sign-up/form/styles';
-import { SIGN_IN } from '../../../global/strings';
+import { Container, Header } from '../../sign-up/form/styles';
+import { DO_NOT_HAVE_ACCOUNT, SIGN_IN } from '../../../global/strings';
 import { useForm } from 'react-hook-form';
 import { useApiMutation } from '../../../api/user/sign-in';
 import { useNavigate } from 'react-router-dom';
-import { backButtonStyle } from './styles';
+// import { backButtonStyle } from './styles';
 import { setToken } from '../../../utils/authentication';
+import { Link, Text } from './styles';
+import { SIGN_UP } from '../../../routes/URLs';
 
 export default function Form() {
   const { register, handleSubmit } = useForm();
@@ -25,9 +27,9 @@ export default function Form() {
     })();
   };
 
-  const handleBackClick = () => {
-    navigate('/');
-  };
+  // const handleBackClick = () => {
+  //   navigate('/');
+  // };
 
   return (
     <>
@@ -52,14 +54,20 @@ export default function Form() {
               register={register}
               type="password"
             />
-            <FieldsWrapper>
-              <Button
+            {/* <Button
                 text="Back"
                 onClick={handleBackClick}
                 style={backButtonStyle}
-              />
-              <Button text={SIGN_IN} onClick={handleOnClick} />
-            </FieldsWrapper>
+              /> */}
+            <Button
+              text={SIGN_IN}
+              onClick={handleOnClick}
+              style={{ width: '250px', marginBottom: '-10px' }}
+            />
+            <Text>
+              {DO_NOT_HAVE_ACCOUNT}
+              <Link href={SIGN_UP}>create one</Link>
+            </Text>
           </Container>
         </>
       )}
