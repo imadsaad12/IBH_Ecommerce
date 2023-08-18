@@ -18,10 +18,12 @@ export const LeftContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.md}){
     width: 99%;
     height: 50vh;
+    display: none;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.md}) and (min-height: ${(props) => props.theme.breakpoints.lg}){
     width: 99%;
     height: 36vh;
+    display: none;
   }
 `;
 

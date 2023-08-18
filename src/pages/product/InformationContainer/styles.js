@@ -7,6 +7,11 @@ export const Container = styled.div`
   max-width: 45%;
   min-width: 35%;
   margin-left: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}){
+    max-width: none;
+    min-width: auto;
+    margin: 10%;
+  }
 `;
 
 export const Name = styled.h1`
@@ -14,6 +19,9 @@ export const Name = styled.h1`
   font-weight: bold;
   font-family: ${(props) => props.theme.fontFamily.regular};
   margin-bottom: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.md}){
+    font-size: ${(props) => props.theme.fontSizes.big}px;
+  }
 `;
 
 export const Description = styled.p`
@@ -57,5 +65,9 @@ export const AddToCartButton = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.secondaryBlue};
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.blg}){
+    max-width: 50%;
   }
 `;

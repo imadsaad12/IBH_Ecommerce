@@ -5,11 +5,16 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 90vh;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}){
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 export const Image = styled.img`
   width: 50%;
-  max-height: 600px;
+  max-height: 90%;
+  margin-top: 10px;
   border-radius: 10px;
 `;
 

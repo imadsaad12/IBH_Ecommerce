@@ -11,22 +11,51 @@ export default function Bar() {
 
   const handleSignOut = () => {
     removeToken();
+    toggleMenu();
     navigate('/');
+  };
+
+  // Function to toggle menu open status and handle scrolling
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+    if (!isMenuOpen) {
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    } else {
+      document.body.style.overflow = 'auto'; // Enable scrolling
+    }
   };
 
   return (
     <Container isMenuOpen={isMenuOpen}>
       <LeftContainer>
         <HamburgerIcon isMenuOpen={isMenuOpen}>
-          <Hamburger toggled={isMenuOpen} toggle={setMenuOpen} />
+          <Hamburger toggled={isMenuOpen} toggle={toggleMenu} />
         </HamburgerIcon>
-        <MenuItem onClick={() => navigate('/')} isMenuOpen={isMenuOpen}>
+        <MenuItem
+          onClick={() => {
+            toggleMenu();
+            navigate('/');
+          }}
+          isMenuOpen={isMenuOpen}
+        >
           {HOME}
         </MenuItem>
-        <MenuItem onClick={() => navigate('/about-us')} isMenuOpen={isMenuOpen}>
+        <MenuItem
+          onClick={() => {
+            toggleMenu();
+            navigate('/about-us');
+          }}
+          isMenuOpen={isMenuOpen}
+        >
           {ABOUT_US}
         </MenuItem>
-        <MenuItem onClick={() => navigate('/contact')} isMenuOpen={isMenuOpen}>
+        <MenuItem
+          onClick={() => {
+            toggleMenu();
+            navigate('/contact');
+          }}
+          isMenuOpen={isMenuOpen}
+        >
           {CONTACT}
         </MenuItem>
         {isMenuOpen && (
